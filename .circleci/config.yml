@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: bash:5.0.7
+    steps:
+      - checkout
+      - echo 'hello!'
+
+workflows:
+  test:
+    jobs:
+      - build
